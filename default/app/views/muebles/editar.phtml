@@ -1,0 +1,8 @@
+<?php View::content() ?> 
+<h3>Editar Mueble<h3>
+<?= Form::open(); // por defecto llama a la misma url ?>
+  <label>Tipo <?= Form::text('registros.nombre') ?></label>
+  <?= Form::hidden('registros.id') ?> 
+  <?= Form::submit('Actualizar') ?> 
+  
+<?= Form::close() ?>
