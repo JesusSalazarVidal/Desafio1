@@ -1,0 +1,8 @@
+<?php View::content() ?> 
+<h3>Editar Abogado<h3>
+<?= Form::open(); // por defecto llama a la misma url ?>
+  <label>Nombre <?= Form::text('abogados.nombre') ?></label>
+  <?= Form::hidden('abogados.id') ?> 
+  <?= Form::submit('Actualizar') ?> 
+  
+<?= Form::close() ?>

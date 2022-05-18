@@ -1,0 +1,54 @@
+
+  <?php View::content() ?> 
+  <h3>Sucursales</h3>
+  <!--
+  <ul>
+     
+  <?php foreach($listSucursales->items as $item) : ?> 
+  <li>
+    <strong><?= $item->id ?> - <?= $item->nombre ?></strong> 
+    <?= Html::linkAction("editar/$item->id/", 'Editar') ?> 
+    <?= Html::linkAction("eliminar/$item->id/", 'Borrar') ?> 
+    <?= Html::linkAction("ver/$item->id/", 'Ver') ?> 
+      
+  </li>
+  <?php endforeach ?>
+  </ul>
+     !-->
+  <table BORDER  WIDTH='500'>
+
+  <tr>
+
+    <th>ID</th>
+
+    <th>Nombre</th>
+
+    <th>Acciones</th>
+
+  </tr>
+  <?php foreach($listSucursales->items as $item) : ?> 
+
+  <tr>
+
+    <td><?= $item->id ?></td>
+
+    <td><?= $item->nombre ?></td>
+
+    <td>
+    <?= Html::linkAction("editar/$item->id/", 'Editar |') ?> 
+    <?= Html::linkAction("eliminar/$item->id/", 'Borrar |') ?> 
+    <?= Html::linkAction("ver/$item->id/", 'Ver') ?> 
+    </td>
+
+  </tr>
+  <?php endforeach ?>
+
+  
+</table>
+
+
+  
+   
+  <?php if($listSucursales->prev) echo Html::linkAction("index/$listSucursales->prev/", '<< Anterior |') ?> 
+  <?php if($listSucursales->next) echo Html::linkAction("index/$listSucursales->next/", 'Proximo >>') ?> 
+</div>

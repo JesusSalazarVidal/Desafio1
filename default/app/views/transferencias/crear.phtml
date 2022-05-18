@@ -1,0 +1,14 @@
+<?php View::content() ?>
+<h3>Crear Transferencia<h3>
+
+<?= Form::open(); // por defecto llama a la misma url ?> 
+
+      <label>Nombre
+      <?= Form::text('registros.nombre') ?></label>
+
+      
+
+      <?= Form::submit('Agregar') ?> 
+      <?= Html::linkAction("listar", 'Listado') ?> 
+
+<?= Form::close() ?> 
