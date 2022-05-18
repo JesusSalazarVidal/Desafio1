@@ -66,7 +66,7 @@ class TransferenciasController extends AppController
             Flash::error('Fallo Operacion');
 
         }
-        return Redirect::to();
+        return Redirect::to('transferencias/listar');
     }
 
     public function ver($id){

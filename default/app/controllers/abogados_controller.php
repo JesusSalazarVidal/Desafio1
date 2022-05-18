@@ -66,7 +66,7 @@ class AbogadosController extends AppController
             Flash::error('Fallo Operacion');
 
         }
-        return Redirect::to();
+        return Redirect::to('abogados/listar');
     }
 
     public function ver($id){
